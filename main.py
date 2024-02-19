@@ -2,8 +2,8 @@
 #print('First commit!')
 
 #19.02.24
-#task1
 
+#task1
 def passCheck():
     pass1 = input("Введите пароль: ")
     pass2 = input("Подтвердите пароль: ")
@@ -39,7 +39,11 @@ def place():
 def year():
     _year = int(input("Введите год: "))
 
-    if (_year % 4 == 0 and _year % 2 != 0) or _year % 400 == 0:
+    if _year < 0:
+        print(f"{_year} - не номер года")
+        return
+
+    if (_year % 4 == 0 and _year % 100 != 0) or _year % 400 == 0:
         print(f"{_year} - високосный год")
     else:
         print(f"{_year} - не високосный год")
@@ -77,4 +81,4 @@ def colors():
     elif "желтый" in new_color:
         print("желтый")
 
-place()
+year()
